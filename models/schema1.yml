@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: raw data for greenweez
+    tables:
+      - name: product
+        identifier: raw_gz_product
+        description: product data for greenweez
+        columns:
+          - name: products_id
+            description: unique id of the product
+            tests:
+              - not_null
+          - name: purchse_price
+            description: purchase price of the product
