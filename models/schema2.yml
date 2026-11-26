@@ -1,0 +1,23 @@
+
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: raw data for greenweez
+    tables:
+      - name: ship
+        identifier: raw_gz_ship
+        description: shipping data for greenweez
+        columns:
+          - name: orders_id
+            description: unique id of the order
+            tests:
+              - not_null
+          - name: shipping_fee
+            description: shipping fee
+          - name: logcost
+            description: logistics cost
+          - name: ship_cost
+            description: shipping cost
+
